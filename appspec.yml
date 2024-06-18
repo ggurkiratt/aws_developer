@@ -3,10 +3,10 @@ os: linux
 
 hooks:
   ApplicationStop:
-    - location: blob/main/scripts/start_container.sh
+    - location: scripts/start_container.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: blob/main/scripts/stop_container.sh
+    - location: main/scripts/stop_container.sh
       timeout: 300
       runas: root
